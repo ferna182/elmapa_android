@@ -82,7 +82,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     item.getInt("i"),
                     item.getString("organizador"),
                     location,
-                    "https://www.elmapa.com.ar/assets/pokes/${item.getInt("i")}_shuffle.png"
+                    "https://www.elmapa.com.ar/assets/pokes/${item.getInt("i")}_shuffle.png",
+                    item.getString("picture")
             ))
         }
 
@@ -119,29 +120,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         }
     }
-
-    /*
-    *
-    * {"id":"10215861116265854",
-    * "0":"10215861116265854",
-    * "idraid":"1620",
-    * "1":"1620",
-    * "organizador":"Lorena Caminos",
-    * "2":"Lorena Caminos",
-    * "x":"-34.5882",
-    * "3":"-34.5882",
-    * "y":"-58.4274",
-    * "4":"-58.4274",
-    * "i":"42",
-    * "5":"42",
-    * "picture":"https:\/\/platform-lookaside.fbsbx.com\/platform\/profilepic\/?asid=10215861116265854&height=50&ext=1544410811&hash=AeQbKt0S0TuX7mpA",
-    * "6":"https:\/\/platform-lookaside.fbsbx.com\/platform\/profilepic\/?asid=10215861116265854&height=50&ext=1544410811&hash=AeQbKt0S0TuX7mpA",
-    * "total":"531",
-    * "7":"531"
-    * }
-    *
-    *
-    * */
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
